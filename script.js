@@ -2,8 +2,8 @@ let current_score = 0;
 let player = [0, 0];
 let active = 0;
 let playerName = [0, 0];
-playerName[0] = prompt("Enter player 1 name");
-playerName[1] = prompt("Enter player 2 name");
+// playerName[0] = prompt("Enter player 1 name");
+// playerName[1] = prompt("Enter player 2 name");
 function init() {
   current_score = 0;
   active = 0;
@@ -54,7 +54,7 @@ document.querySelector(".roll-dice").addEventListener("click", () => {
 document.querySelector(".hold").addEventListener("click", () => {
   player[active] += current_score;
   document.querySelector(`.total-${active}`).textContent = player[active];
-  if (player[active] >= 10) {
+  if (player[active] >= 100) {
     console.log(`Player ${active + 1} won!`);
     document.querySelector(
       ".winner"
@@ -71,4 +71,12 @@ document.querySelector(".play-again").addEventListener("click", () => {
 document.querySelector(".play-again-overlay").addEventListener("click", () => {
   init();
 });
+
+document.querySelector(".start-game").addEventListener("click", () => {
+  playerName[0] = document.getElementById("player-0-name").value;
+  playerName[1] = document.getElementById("player-1-name").value;
+  document.querySelector("header").classList.toggle("hidden");
+  init();
+});
+
 init();

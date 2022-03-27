@@ -19,6 +19,53 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+header {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(201, 0, 33),
+    rgb(115, 0, 126)
+  );
+  z-index: 20;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 80px;
+  background: rgba(255, 52, 120, 0.411);
+  border-radius: 5px;
+  box-shadow: 2px 3px 80px rgba(10, 10, 10, 0.37);
+}
+
+form > .btn {
+  position: relative;
+  margin-top: 40px;
+  background-color: rgba(255, 0, 128, 0.747);
+  color: aliceblue;
+  border-radius: 0;
+}
+label {
+  margin: 10px;
+  color: rgba(10, 10, 10, 0.562);
+  font-size: 1.3rem;
+}
+input {
+  margin: 10px;
+  padding: 10px;
+  background: rgba(253, 81, 153, 0.808);
+  border: none;
+  color: aliceblue;
+  font-size: 1.3rem;
+}
 main {
   width: 900px;
   height: 550px;
